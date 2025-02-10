@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JJ-Joy Cuisine</title>
     <!-- font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" sizes="32x32" href="images/favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="images/favicon/J1.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
 
     <!-- inter font link -->
@@ -47,6 +47,9 @@
         margin: 0;
         padding: 0;
         font-family: "DynaPuff", serif;
+      }
+      body{
+        background-color: #000;
       }
       .fs-20{
         font-size: 20px !important;
@@ -92,7 +95,7 @@
         width: max-content;
         -webkit-text-stroke: 1px white; /* White border */
       }
-      @media (min-width: 769px) {
+      @media (min-width: 768px) {
         .mobtext{font-size: 16px !important; font-weight: 400 !important;}
         .custom-dropdown-menu .dropdown-item {white-space: normal !important;}
         /* footer {
@@ -132,7 +135,7 @@
       }
         .custom-dropdown-menu .price {
         color: #fff;
-        font-size: 36px;
+        /*font-size: 36px;*/
         font-family: "Inter", serif;
       }
         .custom-dropdown-menu {
@@ -166,6 +169,7 @@
           width: 100vw;
           height: 100vh;
           object-fit: cover;
+          display: block;
           /*width: -webkit-fill-available;*/
           /*margin-top: -25px;*/
         }
@@ -306,7 +310,8 @@
           font-weight: 400 !important;
         }
       }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
+
         .custom-dropdown-button::after {
         content: "";
         top: 45% !important;
@@ -376,14 +381,13 @@
           width: 100%;
           display: block;
         }
+        .back{
+          display: none;
+        }
         /* body{
             background-color: #23202C;
         } */
-        .back {
-          /* position: fixed;
-            right: 0;
-            bottom: 0;
-            z-index: -1;*/
+        /*.back {
           position: fixed;
           top: 0;
           left: 0;
@@ -391,16 +395,16 @@
           bottom: 0;
 
           z-index: -1;
-          width: 100%; /* Ensure it covers the full width */
-          height: 100%; /* Ensure it covers the full height */
-          object-fit: cover; /* Ensure the video scales proportionally without distortion */
-        }
-        .content {
+          width: 100%; 
+          height: 100%; 
+          object-fit: cover;
+        }*/
+        /*.content {
           background-color: rgb(35, 32, 44, 0);
-          min-height: 100vh; /* Ensure it takes the full screen height */
+          min-height: 100vh; 
           display: flex;
           flex-direction: column;
-        }
+        }*/
         /* @media(min-aspect-ratio:16/9){
             .back{
                 width: 100%;
@@ -413,6 +417,7 @@
                 height: 100%;
             }
         } */
+
          .fs-75em{
           font-size: .75em !important;
          }
@@ -425,6 +430,7 @@
         .border-green {
           border: 3px solid #6a8d0b;
         }
+        .menubtn,.resbtn{width: 60%; margin: 0 auto;}
         .border-bottom-green {
           border-bottom: 3px solid #6a8d0b;
         }
@@ -661,6 +667,7 @@
         font-family: "Inter", serif !important;
       }
       @media (min-width: 1024px) {
+      .custom-dropdown-menu .price {font-size: 36px !important;}
       .btnclose{
         display: block;
         position: fixed;
@@ -701,7 +708,7 @@
     max-width: 100%; /* Keep buttons centered */
     margin: 0 auto; /* Center alignment */
   }
-  .custom-dropdown-menu .dropdown-item div span, .dropdown-item .w-75,.custom-dropdown-menu .dropdown-item {
+  .custom-dropdown-menu .dropdown-item div span, .dropdown-item .w-75,.custom-dropdown-menu .dropdown-item,    .custom-dropdown-menu .price  {
         font-size: 24px !important;
     }
 }
@@ -709,6 +716,10 @@
   .vh-90 {
    height: auto;
   }
+}
+@media (max-height: 675px) {
+  .mobvid{margin-top: -13%;}
+  .flip-image{margin-top: -14px;}
 }
     </style>
   </head>
@@ -750,7 +761,7 @@
               <a class="text-white mb-1 text-decoration-none d-block" href="tel:+236-422-3344">236-422-3344</a>
               <a href="https://www.google.com/maps/search/?q=101-1475+Fairview+Rd,+Penticton,+BC+V2A+7W5" target="_blank" class="text-white text-decoration-none sunday text-nowrap">
                 <p class="text-white mb-1">101-1475 Fairview Rd Penticton</p>
-                <p class="text-white mb-1">BC V2A 7W5</p>
+                <!-- <p class="text-white mb-1">BC V2A 7W5</p> -->
               </a>
             </div>
             <div class="col-2">
@@ -771,8 +782,8 @@
             </div>
             <div class="col-3 col-xl-2 text-end">
               <p class="text-white mb-1">Lunch 11:30 - 14:00</p>
-              <p class="text-white mb-1">Dinner 16:00 - 20:00</p>
-              <p class="text-green fw-semibold font-inter sunday">Closed Sundays, Mondays, and Holidays</p>
+              <p class="text-white mb-1">Dinner 16:30 - 20:00</p>
+              <p class="text-white fw-semibold font-inter sunday">Closed Sundays, Mondays, and Holidays</p>
             </div>
           </div>
         </footer>
@@ -1019,7 +1030,7 @@
                               data-bs-toggle="dropdown"
                               aria-expanded="false"
                             >
-                              <span class="fs-40 fs-22">Chop Suey Noodles</span>
+                              <span class="fs-40 fs-22">Chop Suey & Noodles</span>
                             </button>
                             <ul
                               class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
@@ -1031,7 +1042,7 @@
                                 </a>
                                 <span class="text-white px-4 mt-0 d-inline-block w-75"
                                   >Stir-fried assorted vegetables in oyster
-                                  sauce. Add Beef, Chicken, or Shrimp</span
+                                  sauce. Add Beef, Chicken, or Shrimp $3.50</span
                                 >
                               </li>
                               <li class="mt-4">
@@ -1161,7 +1172,7 @@
                                 </a>
                                 <span class="text-white px-4 mt-0 d-inline-block w-75"
                                   >Assorted vegetables in teriyaki sauce with
-                                  rice Add Beef, Chicken or Shrimp</span
+                                  rice Add Beef, Chicken or Shrimp $3.50</span
                                 >
                               </li>
                               <li class="mt-4">
@@ -1588,8 +1599,7 @@
                               <li class="mt-4">
                                 <span class="text-white px-4 mt-0 d-inline-block w-75" style="font-style: italic;">
                                   *Choose from all dishes of<br> 
-                                  Chop Suey &
-                                  Noodles<br>
+                                  Chop Suey & Noodles<br>
                                   Rice Bowl<br> Beef / Chicken / Pork
                                 </span>
                                 <br />
@@ -2762,51 +2772,60 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- header -->
-      <div class="container-fluid d-md-none" id="mobileview">
-        <div class="col-12 d-flex flex-column vh-90">
-          <!-- First Div (Top) -->
-          <div class="col-12 col-sm-10 mx-auto" style="min-height: 38vh">
-            <img src="images/jj_Logo.png" alt="Mask-group" class="image-fluid flip-image w-50"/>
-          </div>
-        
-          <!-- Second Div (Middle) -->
-          <div class="col-12 flex-grow-1 mb-5">
-            <div class="col-12 col-sm-9 mx-auto mb-3 text-center align-self-center d-grid">
-              <button type="button" class="btn py-lg-3 text-white text-decoration-none font-1 fs-4 border-green bg-dark-blue rounded-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="padding: 4px;">MENU</button>
-            </div>
-            <div class="col-12 col-sm-9 mx-auto text-center d-grid">
-              <button type="button" class="py-lg-3 py-1 text-white text-decoration-none font-1 border-green bg-dark-blue fs-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
-                RESERVATION
-              </button>
-            </div>
-          </div>
-        
-          <!-- Third Div (Bottom) -->
-          <div class="col-12 mt-5 px-2 font-inter fw-medium mt-auto">
-            <div class="d-flex justify-content-evenly mt-4">
-              <div class="col-6">
-                <a class="text-green mb-1 text-decoration-none d-block" href="mailto:manager@jj-joy.com"><small class="fs-75em">manager@jj-joy.com</small></a>
-                <a class="text-white mb-1 text-decoration-none d-block fs-75em" href="tel:+236-422-3344"><small>236-422-3344</small></a>
-                <a href="https://maps.google.com/?q=101-1475+Fairview+Rd,+Penticton,+BC+V2A+7W5" target="_blank" class="text-white text-decoration-none">
-                  <p class="text-white mb-1"><small class="fs-75em">101-1475 Fairview Rd Penticton </small></p>
-                  <p class="text-white mb-0"><small class="fs-75em">BC V2A 7W5</small></p>
-                </a>
-              </div>
-              <div class="col-5 text-end">
-                <p class="text-white mb-1"><small class="fs-75em">Lunch 11:30 - 14:00</small></p>
-                <p class="text-white mb-1"><small class="fs-75em">Dinner 16:00 - 20:00</small></p>
-                <p class="text-green mb-1 fw-semibold font-inter"><small>Closed Sundays, Mondays, and Holidays</small></p>
-              </div>
-            </div>
-            <a class="text-white text-decoration-none mx-auto d-block text-center font-inter" href="https://hhlab.ca/" target="_blank" style="font-size:14px;">
-              2025 © All rights reserved
-            </a>
+    <!-- header -->
+    <div class="container-fluid d-md-none bg-black h-100" id="mobileview">
+      <div class="col-12 d-flex flex-column">
+        <!-- First Div (Top) -->
+        <div class="col-12 col-sm-10 mx-auto">
+          <img src="images/jj_Logo.png" alt="Mask-group" class="image-fluid flip-image w-50"/>
+        </div>
+
+        <div class="mobvid">
+          <div class="col-10 mx-auto mb-5">
+            <video autoplay loop muted plays-inline class="w-100">
+              <!-- <source src="images/GH011725.MP4" type="video/mp4"> -->
+              <source src="images/JJ slide Clip-new.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
-        
-      </div>
+
+
+        <!-- Second Div (Middle) -->
+        <div class="col-12 flex-grow-1 mb-5">
+          <div class="col-12 col-sm-9 mx-auto mb-3 text-center align-self-center d-grid">
+            <button type="button" class="btn py-lg-3 text-white bg-green text-decoration-none font-1 fs-4 border-green bg-dark-blue rounded-0 menubtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="padding: 4px;">MENU</button>
+          </div>
+          <div class="col-12 col-sm-9 mx-auto text-center d-grid">
+            <button type="button" class="py-lg-3 py-1 text-white text-decoration-none font-1 bg-green border-green bg-dark-blue fs-4 resbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+              RESERVATION
+            </button>
+          </div>
+        </div>
+      
+        <!-- Third Div (Bottom) -->
+        <div class="col-12 mt-5 px-2 font-inter fw-medium mt-auto">
+          <div class="d-flex justify-content-evenly mt-4">
+            <div class="col-6">
+              <a class="text-green mb-1 text-decoration-none d-block" href="mailto:manager@jj-joy.com"><small class="fs-75em">manager@jj-joy.com</small></a>
+              <a class="text-white mb-1 text-decoration-none d-block fs-75em" href="tel:+236-422-3344"><small>236-422-3344</small></a>
+              <a href="https://maps.google.com/?q=101-1475+Fairview+Rd,+Penticton,+BC+V2A+7W5" target="_blank" class="text-white text-decoration-none">
+                <p class="text-white mb-1"><small class="fs-75em">101-1475 Fairview Rd Penticton </small></p>
+                <!-- <p class="text-white mb-0"><small class="fs-75em">BC V2A 7W5</small></p> -->
+              </a>
+            </div>
+            <div class="col-5 text-end">
+              <p class="text-white mb-1"><small class="fs-75em">Lunch 11:30 - 14:00</small></p>
+              <p class="text-white mb-1"><small class="fs-75em">Dinner 16:30 - 20:00</small></p>
+              <p class="text-white mb-1 fw-semibold font-inter"><small class="fs-75em">Closed Sundays, Mondays, Holidays</small></p>
+            </div>
+          </div>
+          <a class="text-white text-decoration-none mx-auto d-block text-center font-inter" href="https://hhlab.ca/" target="_blank" style="font-size:14px;">
+            2025 © All rights reserved
+          </a>
+        </div>
+      </div>    
     </div>
 
     <script
