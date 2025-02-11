@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'] ?? '';
     $guests = $_POST['guests'] ?? '';
     $time = $_POST['time'] ?? '';
+    $date = $_POST['date'] ?? '';
     $notes = $_POST['notes'] ?? '';
 
     $mail = new PHPMailer(true);
@@ -23,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPAuth   = true;
         $mail->Username   = 'hira.zahid123@gmail.com'; // Your email
         $mail->Password   = 'kshkdfxkmeogpgjp';  // Your email password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
         // Sender & Recipient
@@ -40,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><strong>Email:</strong> $email</p>
             <p><strong>Guests:</strong> $guests</p>
             <p><strong>Time:</strong> $time</p>
+            <p><strong>Date:</strong> $date</p>
             <p><strong>Special Notes:</strong> $notes</p>
         ";
 
