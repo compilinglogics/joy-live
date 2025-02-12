@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port       = 587;
 
         // Sender & Recipient
-        $mail->setFrom($email, 'JJ Reservations');
+        $mail->setFrom($firstName.'@email.com', 'JJ Reservations');
         $mail->addAddress('compiling.logics@gmail.com', 'Manager');
 
         // Email Content
