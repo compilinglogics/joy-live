@@ -2709,7 +2709,7 @@
                         class="form-label text-white font-inter"
                         >Email (Optional)</label
                       >
-                      <input type="email" name="email" class="form-control" />
+                      <input type="email" name="email" class="form-control" placeholder="Enter your email address" />
                     </div>
                     <div class="col-12 my-3 px-3">
                       <label
@@ -2718,6 +2718,7 @@
                         >Number of guests*</label
                       >
                       <select class="form-select w-md-25 w-100 font-inter" name="guests" id="guestCount">
+                        <option value="0" class="font-inter">0</option>
                         <option value="2" class="font-inter">2</option>
                         <option value="3" class="font-inter">3</option>
                         <option value="4" class="font-inter">4</option>
@@ -2745,7 +2746,7 @@
                       <label for="date" class="form-label text-white font-inter"
                         >Reservation Date</label
                       >
-                      <input class="form-control w-md-25 w-100 font-inter" id="date" type="date" name="date">
+                      <input class="form-control w-md-25 w-100 font-inter" id="date" type="date" name="date" value="">
                     </div>
                     <div class="mb-3 px-3">
                       <label
@@ -2906,5 +2907,9 @@ $(document).ready(function() {
         });
     });
 });
+ document.addEventListener("DOMContentLoaded", function () {
+    let today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+    document.getElementById("date").value = today;
+  });
 </script>
 
