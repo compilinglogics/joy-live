@@ -14,7 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $time = $_POST['time'] ?? '';
     $date = $_POST['date'] ?? '';
     $notes = $_POST['notes'] ?? '';
-
+    if (empty($email)) {
+        $email = strtolower($firstName) . '@email.com';
+    }
     $mail = new PHPMailer(true);
 
     try {
@@ -28,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port       = 587;
 
         // Sender & Recipient
-        $mail->setFrom($firstName.'@email.com', 'JJ Reservations');
+        $mail->setFrom($email, 'JJ Reservations');
         $mail->addAddress('compiling.logics@gmail.com', 'Manager');
 
         // Email Content
