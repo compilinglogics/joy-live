@@ -11,12 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'] ?? '';
     $email = $_POST['email'] ?? '';
     $guests = $_POST['guests'] ?? '';
-    $time = $_POST['time'] ?? '';
     $date = $_POST['date'] ?? '';
+    $time = $_POST['time'] ?? '';
     $notes = $_POST['notes'] ?? '';
-    if (empty($email)) {
-        $email = strtolower($firstName) . '@email.com';
-    }
+
     $mail = new PHPMailer(true);
 
     try {
@@ -24,14 +22,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com'; // Replace with your SMTP server
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'hira.zahid123@gmail.com'; // Your email
-        $mail->Password   = 'kshkdfxkmeogpgjp';  // Your email password
+        $mail->Username   = 'jjjoywebform@gmail.com'; // Your email
+        $mail->Password   = 'aigistxdsemsicnx';  // Your email password
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
         // Sender & Recipient
-        $mail->setFrom($email, 'JJ Reservations');
-        $mail->addAddress('compiling.logics@gmail.com', 'Manager');
+        $mail->setFrom($firstName.'@email.com', 'JJ Reservations');
+        $mail->addAddress('joypenticton@gmail.com', 'Manager');
 
         // Email Content
         $mail->isHTML(true);
@@ -42,8 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><strong>Phone:</strong> $phone</p>
             <p><strong>Email:</strong> $email</p>
             <p><strong>Guests:</strong> $guests</p>
-            <p><strong>Time:</strong> $time</p>
             <p><strong>Date:</strong> $date</p>
+            <p><strong>Time:</strong> $time</p>
             <p><strong>Special Notes:</strong> $notes</p>
         ";
 
@@ -54,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(["status" => "success", "message" => "Reservation successfully submitted!"]);
         exit();
     } catch (Exception $e) {
-        echo json_encode(["status" => "error", "message" => "Email could not be sent. Error: {$mail->ErrorInfo}"]);
+        echo json_encode(["status" => "error", "message" => "Frist Name & Contact number is required. {$mail->ErrorInfo}"]);
         exit();
     }
 }
