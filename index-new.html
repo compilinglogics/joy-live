@@ -1,0 +1,2915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JJ-Joy Cuisine</title>
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--  <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="images/favicon/J1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+
+    <!-- inter font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      .menubtn:hover{background-color: #23202c !important;}
+      .dynapuff-fonting {
+          font-family: "DynaPuff", serif;
+          font-optical-sizing: auto;
+          font-weight: <weight>;
+          font-style: normal;
+          font-variation-settings: "wdth" 100;
+        }
+      html,
+      body {
+        height: 100%; /* Ensure full height usage */
+        margin: 0;
+        padding: 0;
+        font-family: "DynaPuff", serif;
+      }
+      body{
+        background-color: #000;
+      }
+      .fs-20{
+        font-size: 20px !important;
+      }
+      .btn-close {opacity: 1;}
+      .w-75{width: 70% !important;}
+      .w-20{width: 30%;}
+       @media (max-width: 425px) {
+        .footright{text-align: end;}
+          /*.w-75{width: 85% !important;}
+          .w-20{width: 15% !important;}
+          .price.w-20{font-size: 16px !important;}*/
+        }
+      .dropdown-menu {
+        top: 30% !important;
+        bottom: auto !important;
+        transform: translateY(0) !important;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*height: 50vh; */
+      }
+      .vh-50{
+        height: 50vh;
+      }
+      .border-green-2 {
+        border: 2px solid #6a8d0b !important;
+      }
+      .flip-image {
+        width: 60%;
+      }
+      .overlay-text {
+        font-size: clamp(
+          24px,
+          5vw,
+          34px
+        ); /* Adjusts between 24px and 74px based on screen size */
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        padding: 10px 20px;
+        border-radius: 8px;
+        width: max-content;
+        -webkit-text-stroke: 1px white; /* White border */
+      }
+      @media (min-width: 768px) {
+        .mobtext{font-size: 16px !important; font-weight: 400 !important;}
+        .custom-dropdown-menu .dropdown-item {white-space: normal !important;}
+        /* footer {
+          bottom: 0;
+          width: 100%;
+          padding: 10px 0;
+          position: absolute;
+        } */
+        .fs22desk{font-size: 36px !important;}
+        .fs-40{
+          font-size: 40px !important;
+          font-weight: 400 !important;
+        }
+        .custom-dropdown-menu .dropdown-item div span,.dropdown-item .w-75{font-size: 36px !important;}
+        .custom-dropdown-menu .dropdown-item {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        font-size: 36px;
+        /*border-bottom: 1px solid #555;*/
+        background-color: transparent !important;
+        transition: none !important;
+        font-family: "Inter", serif;
+        font-weight: 300;
+      }
+      .custom-dropdown-menu span {
+        font-family: "Inter", serif;
+        font-weight: 300;
+        font-size: 20px;
+      }
+      .dropdown-item small {
+        font-family: "Inter", serif;
+        font-weight: 300;
+        font-size: 20px;
+      }
+        .custom-dropdown-menu .price {
+        color: #fff;
+        /*font-size: 36px;*/
+        font-family: "Inter", serif;
+      }
+        .custom-dropdown-menu {
+          transform: translate3d(-0.5px, 61px, 0px) !important;
+        }
+        .cardcus,
+        .card-img-top,
+        .dropdown.rounded-4 {
+          padding-left: 3px !important;
+          padding-right: 3px !important;
+        }
+        /* body{
+            background-color: #23202C;
+        } */
+        header {
+          height: 108px;
+        }
+        header h2 {
+          width: 50%;
+          margin: 0 auto;
+          padding-bottom: 20px;
+          text-align: center;
+          border-bottom: 1px solid;
+        }
+        #desktop-view {
+          flex: 1;
+        }
+        .back {
+          position: fixed;
+          z-index: -1;
+          width: 100vw;
+          height: 100vh;
+          object-fit: cover;
+          display: block;
+          /*width: -webkit-fill-available;*/
+          /*margin-top: -25px;*/
+        }
+        .content {
+          background-color: rgb(35, 32, 44, 0);
+          /*height: 102vh;*/
+          min-height: 100vh; /* Ensure it takes the full screen height */
+          display: flex;
+          flex-direction: column;
+        }
+
+        .bg-dark-blue{
+          background-color: #23202c;
+        }
+        .bg-green {
+          background-color: #6a8d0b;
+        }
+        .border-green {
+          border: 1px solid #6a8d0b;
+        }
+        .border-green-2 {
+          border: 2px solid #6a8d0b !important;
+        }
+        .border-bottom-green {
+          border-bottom: 1px solid #6a8d0b;
+        }
+        .border-bottom-white {
+          border-bottom: 1px solid #fff;
+        }
+        .dynapuff-fonting {
+          font-family: "DynaPuff", serif;
+          font-optical-sizing: auto;
+          font-weight: <weight>;
+          font-style: normal;
+          font-variation-settings: "wdth" 100;
+        }
+        .font-1 {
+          /*font-family: "Unbounded", serif;*/
+        }
+        .text-green {
+          color: #6a8d0b;
+        }
+        .w-60 {
+          width: 60%;
+        }
+        .bg-gray {
+          background-color: #404f5d;
+        }
+        .nam-right-29 {
+          right: 29%;
+        }
+        .nam-right-1 {
+          right: -1%;
+        }
+        .nam-right-15 {
+          right: 15%;
+        }
+        .nam-right-13 {
+          right: 13%;
+        }
+        .nam-right-25 {
+          right: 25%;
+        }
+        .nam-right-38 {
+          right: -38%;
+        }
+        .nam-right-7 {
+          right: -7%;
+        }
+        .nam-right-27 {
+          right: 27%;
+        }
+        .nam-right-20 {
+          right: 20%;
+        }
+        .nam-right-0 {
+          right: 0%;
+        }
+        .nam-right-6 {
+          right: -6%;
+        }
+        .nam-right-10 {
+          right: 10%;
+        }
+        .nam-right-11 {
+          right: 11%;
+        }
+        .nam-right-35 {
+          right: 35%;
+        }
+        .bottom-9 {
+          bottom: 9%;
+        }
+        .form-select option:checked {
+          background-color: #6a8d0b;
+          color: white;
+        }
+
+        ::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background-color: #6a8d0b;
+          border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background-color: darkgreen;
+        }
+        .flip-image {
+          animation: flip 1s ease-in-out 2;
+          transform-style: preserve-3d;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 60%;
+        }
+        @keyframes flip {
+          0% {
+            transform: rotateY(0deg);
+          }
+          100% {
+            transform: rotateY(360deg);
+          }
+        }
+      }
+       @media screen and (min-width: 769px) and (max-width: 936px) {
+        .price{font-size: 27px !important;}
+      }
+      @media screen and (min-width: 768px) and (max-width: 1180px) {
+        .fs-22{
+          font-size: 22px !important;
+          font-weight: 400 !important;
+        }
+      }
+      @media (max-width: 767px) {
+
+        .custom-dropdown-button::after {
+        content: "";
+        top: 45% !important;
+        width: 18px !important;
+        height: 18px !important;
+      }
+        .mobtext{margin: 0 auto;display: block;text-align: center;font-size: 16px;}
+        .custom-dropdown-menu .dropdown-item div span,.dropdown-item .w-75{font-size: 22px !important;}
+       .dropdown-menu {
+        top: -12% !important;}
+        .fs-22{
+          font-size: 22px !important;
+          font-weight: 400 !important;
+        }
+        .custom-dropdown-menu .dropdown-item {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        font-size: 22px;
+        /*border-bottom: 1px solid #555;*/
+        background-color: transparent !important;
+        transition: none !important;
+        font-family: "Inter", serif;
+        font-weight: 300;
+        white-space: normal !important;
+      }
+      .custom-dropdown-menu span {
+        font-family: "Inter", serif;
+        font-weight: 300;
+        font-size: 16px;
+      }
+      .custom-dropdown-menu small {
+        font-family: "Inter", serif;
+        font-weight: 300;
+        font-size: 16px;
+      }
+      .custom-dropdown-menu .price {
+        color: #fff;
+        font-size: 22px;
+        font-family: "Inter", serif;
+      }
+        header h2 {
+          width: 50%;
+          margin: 0 auto;
+          padding-bottom: 20px;
+          text-align: center;
+          border-bottom: 1px solid;
+        }
+        /* .footerr {
+          bottom: 0;
+          width: 100%;
+          padding: 10px 0;
+          position: absolute;
+        } */
+        .custom-dropdown-menu {
+          transform: translate3d(-0.5px, 61px, 0px) !important;
+        }
+        .cardcus,
+        .card-img-top,
+        .dropdown.rounded-4 {
+          padding-left: 3px !important;
+          padding-right: 3px !important;
+        }
+        .moblink {
+          width: 100%;
+          display: block;
+        }
+        .back{
+          display: none;
+        }
+        /* body{
+            background-color: #23202C;
+        } */
+        /*.back {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+
+          z-index: -1;
+          width: 100%; 
+          height: 100%; 
+          object-fit: cover;
+        }*/
+        /*.content {
+          background-color: rgb(35, 32, 44, 0);
+          min-height: 100vh; 
+          display: flex;
+          flex-direction: column;
+        }*/
+        /* @media(min-aspect-ratio:16/9){
+            .back{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media(min-aspect-ratio:16/9){
+            .back{
+                width: auto;
+                height: 100%;
+            }
+        } */
+
+         .fs-75em{
+          font-size: .75em !important;
+         }
+        .bg-dark-blue{
+          background-color: #23202c;
+        }
+        .bg-green {
+          background-color: #6a8d0b;
+        }
+        .border-green {
+          border: 3px solid #6a8d0b;
+        }
+        .menubtn,.resbtn{width: 60%; margin: 0 auto;}
+        .border-bottom-green {
+          border-bottom: 3px solid #6a8d0b;
+        }
+        .font-1 {
+          /*font-family: "Unbounded", serif;*/
+        }
+        .text-green {
+          color: #6a8d0b;
+        }
+        .w-60 {
+          width: 60%;
+        }
+        .star-bg {
+          background-image: url(images/star-bg.png);
+        }
+        .light-bg {
+          background-image: url(images/light-bg.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        .font-20 {
+          font-size: 20px;
+        }
+        .font-14 {
+          font-size: 14px;
+        }
+        .font-11 {
+          font-size: 11px;
+        }
+        .carousel-control-next,
+        .carousel-control-prev {
+          position: static;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          color: #fff;
+          text-align: center;
+          background: #6a8d0b;
+          border: 0;
+          opacity: 1;
+          transition: opacity 0.15s ease;
+        }
+        .carousel-item .fade-content {
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        }
+
+        /* When active, content should fade in */
+        .carousel-item.active .fade-content {
+          opacity: 1;
+        }
+
+        /* Ensuring that content fades out when sliding to the next slide */
+        .carousel-item-next .fade-content,
+        .carousel-item-prev .fade-content {
+          opacity: 0;
+        }
+        .flip-image {
+          animation: flip 1s ease-in-out 2;
+          transform-style: preserve-3d;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @keyframes flip {
+          0% {
+            transform: rotateY(0deg);
+          }
+          100% {
+            transform: rotateY(360deg);
+          }
+        }
+      }
+      .custom-dropdown-button {
+        /* margin-top: 20px; */
+        appearance: none;
+        background-color: #000000;
+        color: #fff;
+        font-weight: bold;
+        /* font-size: 1.5rem; */
+        border: 2px solid #6a8d0b;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: none;
+        position: relative;
+      }
+
+      .custom-dropdown-button::after {
+        content: "";
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        width: 22px;
+        height: 22px;
+        border: solid #fff;
+        border-width: 0 5px 5px 0;
+        transform: translateY(-50%) rotate(45deg);
+        transition: transform 0.3s ease;
+      }
+
+      .custom-dropdown-button[aria-expanded="true"]::after,
+      .dropdown.show .custom-dropdown-button::after {
+        transform: translateY(-50%) rotate(-135deg);
+      }
+
+      .custom-dropdown-menu {
+        background-color: #000;
+        border-radius: 0 0 10px 10px;
+        padding: 10px;
+        right: 0;
+        position: absolute;
+        z-index: 10;
+        width: 55%;
+        border: 1px solid #6a8d0b;
+      }
+
+      /* .custom-dropdown-menu .dropdown-item {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        font-size: 22px;
+        background-color: transparent !important;
+        transition: none !important;
+        font-family: "Inter", serif;
+        font-weight: 100;
+      }
+      .custom-dropdown-menu span {
+        font-family: "Inter", serif;
+        font-weight: 100;
+        font-size: 20px;
+      } */
+
+      .custom-dropdown-menu .dropdown-item:last-child {
+        border-bottom: none;
+      }
+
+      /* .custom-dropdown-menu .price {
+        color: #6a8d0b;
+        font-weight: 500;
+        font-size: 25px;
+        font-family: "Inter", serif;
+      } */
+
+      .custom-dropdown-menu .dropdown-item:hover {
+        background-color: rgba(87, 87, 87, 0.585) !important;
+        color: white !important;
+        border-bottom-color: #555 !important;
+      }
+
+      .custom-dropdown-button:hover,
+      .custom-dropdown-button:focus,
+      .custom-dropdown-button:active {
+        background-color: #1d1d1d !important;
+        color: #6a8d0b !important;
+        border-color: #6a8d0b !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      @media (max-width: 392px) {
+        .content {
+          width: fit-content;
+        }
+        /*.modal-fullscreen .modal-content{min-width: 390px;}*/
+        .bg-green.d-grid {
+          margin-left: -18px;
+        }
+      }
+      .reservation-bg {
+        background-image: url("images/Reservation_background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      /* Overlay effect */
+      .reservation-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8); /* Dark overlay with 60% opacity */
+      }
+      .custom-top-overlay {
+        position: relative;
+        z-index: 1; /* Keeps the form above the overlay */
+        background: rgba(
+          255,
+          255,
+          255,
+          0.1
+        ); /* Optional: Slight white tint for better contrast */
+      }
+      .lh-4 {
+        line-height: 4;
+      }
+      @media (min-width: 768px) and (max-width: 1230px) {
+        .cushead {
+          bottom: -20px !important;
+        }
+        .overlay-text {
+          font-size: clamp(24px, 5vw, 26px);
+        }
+        @media (max-width: 425px) {
+          .cusrow {
+            margin-left: -50px;
+            margin-right: -50px;
+          }
+
+        }
+        .dropdown-item {
+          white-space: inherit !important;
+        }
+      }
+      .rounded-top{
+        border-radius: 20px 20px 0px 0px !important;
+      }
+      .vh-70{
+        height: 70vh;
+      }
+      input::placeholder{
+        font-family: "Inter", serif;
+      }
+      .font-inter{
+        font-family: "Inter", serif !important;
+      }
+      @media (min-width: 1024px) {
+      .custom-dropdown-menu .price {font-size: 36px !important;}
+      .btnclose{
+        display: block;
+        position: fixed;
+        top: 5%;
+        right: 25%;
+        color: #fff !important;
+        filter: invert(1);
+      }
+      .btnclosemain{display: none;}
+    }
+    @media (max-width: 1023px) {
+      .customclose{
+       display: none;
+      }
+    }
+    .vh-90{
+      height: 90vh;
+    }
+    /* Ensuring both buttons have the same width */
+.button-container {
+  display: flex;
+  gap: 10px; /* Adjust space between buttons */
+}
+
+.button-wrapper {
+  flex: 1; /* Make both buttons take equal space */
+}
+
+.button-wrapper button {
+  width: 91%; /* Ensures buttons stretch equally */
+}
+
+/* Specific Fix for Screens Between 769px - 1200px */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .ress{padding: 5px;}
+  .sunday{font-size: 14px;}
+  .button-container {
+    max-width: 100%; /* Keep buttons centered */
+    margin: 0 auto; /* Center alignment */
+  }
+  .custom-dropdown-menu .dropdown-item div span, .dropdown-item .w-75,.custom-dropdown-menu .dropdown-item,    .custom-dropdown-menu .price  {
+        font-size: 24px !important;
+    }
+}
+@media (max-height: 400px) {
+  .vh-90 {
+   height: auto;
+  }
+}
+@media (max-height: 675px) {
+  .mobvid{margin-top: -13%;}
+  .flip-image{margin-top: -14px;}
+}
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <video autoplay loop muted plays-inline class="back">
+        <!-- <source src="images/GH011725.MP4" type="video/mp4"> -->
+        <source src="images/jnew.mp4" type="video/mp4" />
+      </video>
+      <div class="d-md-flex align-items-end flex-column vh-100 d-none" id="desktop-view">
+        <!-- header -->
+        <div class="container-fluid" >
+          <div class="row justify-content-center align-items-center vh-70">
+            <div class="col-6 mx-auto">
+              <div>
+                <img src="images/jj_Logo.png" alt="Mask-group" class="d-block mx-auto image-fluid w-50 flip-image"/>
+              </div>
+              <div class="d-flex justify-content-evenly button-container">
+                <div class="col-4 text-center d-grid button-wrapper">
+                  <button type="button" class="py-lg-1 text-white text-decoration-none font-1 border-green-2 bg-dark-blue fs-4 rounded-0 ress" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+                    RESERVATION
+                  </button>
+                </div>
+                <div class="col-4 text-center d-grid button-wrapper">
+                  <button type="button" class="menubtn btn py-lg-1 border-green-2 bg-dark-blue text-white text-decoration-none font-1 fs-4 rounded-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    MENU
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="container-fluid mt-auto font-inter fw-medium">
+          <div class="row align-items-center justify-content-evenly">
+            <div class="col-3">
+              <a class="fw-semibold mb-1 text-green d-block" href="mailto:manager@jj-joy.com">manager@jj-joy.com</a>
+              <a class="text-white mb-1 text-decoration-none d-block" href="tel:+236-422-3344">236-422-3344</a>
+              <a href="https://www.google.com/maps/search/?q=101-1475+Fairview+Rd,+Penticton,+BC+V2A+7W5" target="_blank" class="text-white text-decoration-none sunday text-nowrap">
+                <p class="text-white mb-1">101-1475 Fairview Rd Penticton BC &#40;map&#41;</p>
+                <!-- <p class="text-white mb-1">BC V2A 7W5</p> -->
+              </a>
+            </div>
+            <div class="col-2">
+              <img src="images/jj_Logo.png" alt="w" class="w-75" />
+            </div>
+            <div class="col-2 p-md-0">
+              <a
+                class="text-white mb-1 text-decoration-none font-inter text-nowrap"
+                href="https://hhlab.ca/"
+                target="_blank"
+                style="font-size:13px;"
+                >2025 © All rights reserved</a
+              >
+            </div>
+            <div class="col-2">
+              <a href="https://www.facebook.com/thejjjoy/" target="_blank"><img src="images/ri_facebook-fill.png" alt="ri_facebook-fill" class="d-block mx-auto" /></a>
+              <!-- <img src="images/mdi_web.png" alt="mdi_web" /> -->
+            </div>
+            <div class="col-3 col-xl-2 text-end">
+              <p class="text-white mb-1">Lunch 11:30 - 14:00</p>
+              <p class="text-white mb-1">Dinner 16:30 - 20:00</p>
+              <p class="text-white fw-semibold font-inter sunday">Closed Sundays, Mondays, Holidays</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-fullscreen bg-black">
+          <div class="modal-content bg-black">
+            <div
+              class="modal-header"
+              data-bs-theme="dark"
+              style="border-bottom: none"
+            >
+              <!-- <h5 class="modal-title text-white" id="staticBackdropLabel">
+                Menu 1
+              </h5> -->
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body pt-0">
+              <!-- menu list -->
+              <div class="container-fluid pt-5">
+                <div class="row">
+                  <div
+                    class="col-5 mx-auto border-bottom-green border-2 text-center"
+                    style="padding-bottom: 20px"
+                  >
+                    <h1 class="text-green font-2 font-size-96">MENU</h1>
+                  </div>
+                </div>
+                <div class="col-12 col-md-10 mx-auto">
+                  <div class="row mt-4 cusrow">
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card bg-transparent border-0 position-relative m-0 m-md-2 mt-3"
+                      >
+                        <img
+                          src="images/desktop-menu1.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="position-absolute bottom-0 w-100">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="fs-40 fs-22">Appetizer</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li>
+                                <a class="dropdown-item border-0 mb-0 pb-0" href="#"
+                                  >
+                                  <span class="text-white pe-3 mt-0 w-75">Veggie Spring Roll <span>&nbsp;6&nbsp;pcs</span></span>
+                                  <span class="price w-20 text-end">9.95</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item border-0 mb-0 pb-0 mt-4" href="#"
+                                  >
+                                  <span class="text-white pe-3 mt-0 w-75">Pork Dumpling <span>&nbsp;6&nbsp;pcs</span></span>
+                                  <span class="price w-20 text-end">10.50</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item border-0 mb-0 pb-0 mt-4" href="#"
+                                  >
+                                  <span class="text-white pe-3 mt-0 w-75">Yam Tempura <span>&nbsp;6&nbsp;pcs</span></span>
+                                  <span class="price w-20 text-end">10.95</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item border-0 mb-0 pb-0 mt-4" href="#"
+                                  >
+                                  <span class="text-white pe-3 mt-0 w-75">Veggie Tempura <span>&nbsp;4&nbsp;pcs</span></span>
+                                  <span class="price w-20 text-end">11.50</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item border-0 mb-0 pb-0 mt-4" href="#"
+                                  >
+                                  <span class="text-white pe-3 mt-0 w-75">Prawn Tempura <span>&nbsp;7&nbsp;pcs</span></span>
+                                  <span class="price w-20 text-end">13.95</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item border-0 mb-0 pb-0 mt-4" href="#"
+                                  >
+                                  <span class="text-white pe-3 mt-0 w-75">Tempura Combo</span>
+                                  <span class="price w-20 text-end">13.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 d-inline-block w-75">Prawn 3pcs, Yam 3pcs, Onion 3pcs</span>
+                              </li>
+                              <li>
+                                <a class="dropdown-item border-0 mb-0 pb-0 mt-4" href="#"
+                                  >
+                                  <span class="w-75">Golden Wontons</span>
+                                  <span class="price w-20 text-end">11.95</span>
+                                </a>
+                                 <span class="text-white px-4 mt-0 d-inline-block w-75">10 pcs deep fried wontons  with chili sauce</span>
+                              </li>
+                              <li>
+                                <a class="dropdown-item border-0 mb-0 pb-0 mt-4" href="#"
+                                  >
+                                  <span class="w-75">Salt & Pepper Boneless Pork</span>
+                                  <span class="price w-20 text-end">12.95</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card cardcus border-0 bg-transparent position-relative mt-md-0 mt-3"
+                      >
+                        <img
+                          src="images/desktop-menu2.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="position-absolute bottom-0 w-100  pe-1">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              style="padding: 12px"
+                            >
+                              <span class="fs-40 fs-22">Soup</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li class="">
+                                <a class="dropdown-item border-0 mb-0" href="#">
+                                  <span class="w-75">Miso Soup **</span>
+                                  <span class="price text-end w-20">3.00</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Small Pork Wonton</span>
+                                  <span class="price w-20 text-end">6.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item d-flex justify-content-between align-items-start w-100" href="#">
+                                  <div>
+                                    <span class="d-block">Thai Coconut Cream **</span>
+                                    <span class="d-block ms-4"> </span> <!-- Keeps spacing for alignment -->
+                                  </div>
+                                  <div class="text-center">
+                                    <span class="fs-22 d-block">S</span>
+                                    <span class="fs-22 d-block">L</span>
+                                  </div>
+                                  <div class="text-end">
+                                    <span class="price d-block">6.95</span>
+                                    <span class="price d-block">13.95</span>
+                                  </div>
+                                </a>
+                              </li>
+
+                             <!--  <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  Thai Coconut Cream ** 
+                                  <span class="ms-auto me-4 fs-22">S</span>
+                                  <span class="price">6.95</span>
+                                </a>
+                              </li>
+                              <li class="">
+                                <a class="dropdown-item" href="#">
+                                  <span class="ms-auto me-3 fs-22">L</span>
+                                  <span class="price">13.95</span>
+                                </a>
+                              </li> -->
+                            
+                             <!--  <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  Thai Coconut Cream ** (L)
+                                  <span class="price">13.95</span>
+                                </a>
+                              </li> -->
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Pork Wonton Vegetables</span>
+                                  <span class="price w-20 text-end">15.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Spicy Pork Wonton Vegetables</span>
+                                  <span class="price w-20 text-end">16.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Wor Wonton (Chicken & Shrimp)</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Spicy Wor Wonton</span>
+                                  <span class="price w-20 text-end">18.95</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card cardcus bg-transparent  border-0 position-relative m-0 m-md-2 mt-3"
+                      >
+                        <img
+                          src="images/desktop-menu3.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="position-absolute bottom-0 w-100  pe-1">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="fs-40 fs-22">Chop Suey & Noodles</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li class="">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Vegetables Chop Suey **</span>
+                                  <span class="price w-20 text-end">15.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 d-inline-block w-75"
+                                  >Stir-fried assorted vegetables in oyster
+                                  sauce. Add Beef, Chicken, or Shrimp $3.50</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Yakisoba Noodles</span>
+                                  <span class="price w-20 text-end">15.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Prawn Mix Vegetables **</span>
+                                  <span class="price w-20 text-end">18.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Vegetables Chow Mein **</span>
+                                  <span class="price w-20 text-end">15.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Beef Chow Mein **</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Chicken Chow Mein **</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Shrimp Chow Mein **</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                 <span class="w-75">Vegetables Pad Thai **</span>
+                                  <span class="price w-20 text-end">15.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 d-inline-block w-75"
+                                  >Stir-fried with cabbage, tofu, carrot, bean
+                                  sprout, lime, tomato, broccoli</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Beef Pad Thai **</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Chicken Pad Thai **</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Shrimp Pad Thai **</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Veggie Yaki Udon</span>
+                                  <span class="price w-20 text-end">15.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Beef Yaki Udon</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li></span>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Chicken Yaki Udon</span>
+                                  <span class="price w-20 text-end">17.50</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Shrimp Yaki Udon</span>
+                                  <span class="price w-20 text-end">17.50</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <span class="text-white px-2 mt-0"
+                                  >** GF with rice noodles</span
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card cardcus bg-transparent  border-0 position-relative m-0 m-md-2 mt-3"
+                      >
+                        <img
+                          src="images/desktop-menu4.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="position-absolute bottom-0 w-100  pe-1">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="fs-40 fs-22">Rice Bowl</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li>
+                                <a class="dropdown-item border-0 mb-0" href="#">
+                                  <span class="w-75">Veggie Teriyaki Rice&nbsp;Bowl&nbsp;**</span>
+                                  <span class="price w-20 text-end">15.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 d-inline-block w-75"
+                                  >Assorted vegetables in teriyaki sauce with
+                                  rice Add Beef, Chicken or Shrimp $3.50</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Spicy Veggie Teriyaki Rice&nbsp;Bowl&nbsp;**</span>
+                                  <span class="price w-20 text-end">16.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                 <span class="w-75">Korean Beef&nbsp;Bulgogi&nbsp;**</span>
+                                  <span class="price w-20 text-end">19.50</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 d-inline-block w-75"
+                                  >Stir-Fried beef marinated in Korean
+                                  traditional sauce</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                 <span class="w-75">Chicken Karaage Rice Bowl</span>
+                                  <span class="price w-20 text-end">16.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Veggie Fried Rice</span>
+                                  <span class="price w-20 text-end">15.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Beef Fried Rice</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Chicken Fried Rice</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Shrimp Fried Rice</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item d-flex justify-content-between align-items-start w-100" href="#">
+                                  <div>
+                                    <span class="d-block">Steam Rice</span>
+                                    <span class="d-block ms-4"> </span> <!-- Keeps spacing for alignment -->
+                                  </div>
+                                  <div class="text-center">
+                                    <span class="fs-22 d-block">S</span>
+                                    <span class="fs-22 d-block">L</span>
+                                  </div>
+                                  <div class="text-end">
+                                    <span class="price d-block">4.00</span>
+                                    <span class="price d-block">8.00</span>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card cardcus bg-transparent  border-0 position-relative m-0 m-md-2 mt-3"
+                      >
+                        <img
+                          src="images/desktop-menu5.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="position-absolute bottom-0 w-100  pe-1">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="fs-40 fs-22">Baby back pork Ribs</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li class="">
+                                <a class="dropdown-item border-0 mb-0" href="#">
+                                  Half Rack **
+                                  <span class="text-white px-2 mt-0"
+                                  >6 bones</span>
+                                  <span class="price">19.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  Full Rack **
+                                  <span class="text-white px-2 mt-0"
+                                  >12 bones</span>
+                                  <span class="price">35.95</span>
+                                </a>
+                              </li>
+                              <li class="text-white px-2 mt-0 mt-4 font-inter d-inline-block">
+                                ** indicates Gluten Free available;<br><span class="mobtext">advise your
+                                server</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card cardcus bg-transparent  border-0 position-relative m-0 m-md-2 mt-3"
+                      >
+                        <img
+                          src="images/desktop-menu6.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="position-absolute bottom-0 w-100  pe-1">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="fs-40 fs-22">Beef</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li class="">
+                                <a class="dropdown-item border-0 mb-0" href="#">
+                                  <span class="w-75">Beef & Broccoli **<br><span class="px-4">(Spice or Mild)</span></span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Beef & Broccoli in Black Bean Sauce</span>
+                                  <span class="price w-20 text-end">18.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Ginger Beef</span>
+                                  <span class="price w-20 text-end">18.50</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Jun Spicy Beef Noodles</span>
+                                  <span class="price w-20 text-end">18.50</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Sweet & Sour Beef</span>
+                                  <span class="price w-20 text-end">18.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Szechuan Beef **</span>
+                                  <span class="price w-20 text-end">18.95</span>
+                                </a>
+                                <span class="text-white px-4 d-inline-block w-75"
+                                  >Assorted vegetables with beef, red pepper,
+                                  chili pepper</span
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card cardcus bg-transparent  border-0 position-relative m-0 m-md-2 mt-3"
+                      >
+                        <img
+                          src="images/desktop-menu7.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="position-absolute bottom-0 w-100  pe-1">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="fs-40 fs-22">Chicken</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li class="">
+                                <a class="dropdown-item border-0 mb-0" href="#">
+                                  <span class="w-75">Sweet & Sour Chicken</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Lemon Chicken</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Sweet & Mango Chicken</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Ginger Chicken</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Chicken BBQ Ball</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Korean BBQ Wing</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 d-inline-block w-75"
+                                  >11pcs spicy or mild<br>
+                                  Deep fried wings in Korean traditional BBQ sauce
+                                  </span>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Korean Fried Wing</span>
+                                  <span class="price w-20 text-end">16.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 w-75"
+                                  >11pcs salt & pepper</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Szechuan Chicken</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 d-inline-block w-75"
+                                  >Assorted vegetables with chicken red pepper,
+                                  chili pepper</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Red Hot Chicken</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 d-inline-block w-75"
+                                  >Red and white pepper, sugar, vinegar, onion
+                                  pickle, salt</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Honey Garlic Chicken</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 w-75"
+                                  >Honey, garlic, soy sauce</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Orange Chicken</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card cardcus bg-transparent  border-0 position-relative m-0 m-md-2 mt-3"
+                      >
+                        <img
+                          src="images/desktop-menu8.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="position-absolute bottom-0 w-100  pe-1">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="fs-40 fs-22">Pork</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li class="">
+                                <a class="dropdown-item border-0 mb-0" href="#">
+                                  <span class="w-75">Sweet & Sour Pork</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Lemon Pork</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Sweet & Mango Pork</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Ginger Pork</span>
+                                  <span class="price w-20 text-end">17.95</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card cardcus bg-transparent  border-0 position-relative m-0 m-md-2 mt-3"
+                      >
+                        <img
+                          src="images/lunchmenu.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <!-- Text Overlay -->
+                        <div
+                          class="overlay-text position-absolute top-50 start-50 translate-middle fw-bold text-green"
+                        >
+                          Take-Out Only
+                        </div>
+                        <!-- <img
+                            src="images/down-arrow.svg"
+                            class="position-absolute bottom-0 end-0 z-3 w-12 arrow-img"
+                            alt="..."
+                          /> -->
+                        <div class="position-absolute bottom-0 w-100  pe-1">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="fs-40 fs-22">Joy Family Dinner</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li class="">
+                                <a class="dropdown-item border-0 mb-0" href="#">
+                                  <span class="w-75">Dinner for 2 (2 choice)</span>
+                                  <span class="price w-20 text-end">36.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 w-75"
+                                  >2pcs veggie spring rolls included</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Dinner for 3 (3 choice)</span>
+                                  <span class="price w-20 text-end">54.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 w-75"
+                                  >3pcs veggie spring rolls included</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Dinner for 4 (4 choice)</span>
+                                  <span class="price w-20 text-end">71.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 w-75"
+                                  >4pcs veggie spring rolls included</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Dinner for 5 (5 choice)</span>
+                                  <span class="price w-20 text-end">90.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 w-75"
+                                  >5pcs veggie spring rolls included</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <span class="w-75">Dinner for 6 (6 choice)</span>
+                                  <span class="price w-20 text-end">108.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 w-75"
+                                  >6pcs veggie spring rolls included</span
+                                >
+                              </li>
+                              <li class="mt-4">
+                                <span class="text-white px-4 mt-0 d-inline-block w-75" style="font-style: italic;">
+                                  *Choose from all dishes of<br> 
+                                  Chop Suey & Noodles<br>
+                                  Rice Bowl<br> Beef / Chicken / Pork
+                                </span>
+                                <br />
+                                <span class="text-white px-4 mt-4 d-inline-block w-75" style="font-style: italic;">
+                                  Except Appetizer, Soup, and Ribs
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card cardcus bg-transparent  border-0 position-relative m-0 m-md-2 mt-3"
+                      >
+                        <img
+                          src="images/lunchhour.png"
+                          class="card-img-top"
+                          alt="..."
+                          style="border-top-left-radius: 4%;border-top-right-radius: 4%;"
+                        />
+                        <!-- Text Overlay -->
+                        <div
+                          class="overlay-text position-absolute top-50 start-50 translate-middle fw-bold text-green"
+                        >
+                          Lunch Hour Only
+                        </div>
+                        <!-- <img
+                            src="images/down-arrow.svg"
+                            class="position-absolute bottom-0 end-0 z-3 w-12 arrow-img"
+                            alt="..."
+                          /> -->
+                        <div class="position-absolute bottom-0 w-100  pe-1">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="fs-40 fs-22">Lunch Special</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li class="">
+                                <a class="dropdown-item border-0 mb-0 fst-italic fw-medium" href="#">
+                                  <span class="w-75">Rice Bowl</span>
+                                  <span class="price w-20 text-end">16.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 d-inline-block w-75">
+                                  Sweet & Sour Chicken<br> 
+                                  Sweet & Sour Pork<br> 
+                                  Beef & Broccoli
+                                  <br>Vegetables Chop Suey<br>
+                                  Chicken Karaage
+                                </span>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item fst-italic fw-medium pb-0" href="#">
+                                  <span class="w-75">Soup & Ramen</span>
+                                  <span class="price w-20 text-end">15.95</span>
+                                </a>
+                                <span class="text-white px-4 mt-0 fst-italic d-inline-block"
+                                  >(Serve with Rice)</span
+                                ><br>
+                                <span class="text-white px-4 mt-4 d-inline-block w-75">
+                                  Thai Coconut Cream Soup<br>Veggie Ramen
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0">
+                      <div
+                        class="card cardcus bg-transparent  border-0 position-relative m-0 m-md-2 mt-3"
+                      >
+                        <img
+                          src="images/desktop-menu10.png"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <!-- <img
+                          src="images/down-arrow.svg"
+                          class="position-absolute bottom-0 end-0 z-3 w-12 arrow-img"
+                          alt="..."
+                        /> -->
+                        <div class="position-absolute bottom-0 w-100  pe-1">
+                          <div class="dropdown rounded-4">
+                            <button
+                              class="btn dropdown-toggle custom-dropdown-button w-100 position-relative rounded-0 rounded-top"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="fs-40 fs-22">Beverage</span>
+                            </button>
+                            <ul
+                              class="dropdown-menu custom-dropdown-menu dropdown-menu-end mt-1 w-100"
+                            >
+                              <li class="">
+                                <a class="dropdown-item border-0 mb-0" href="#">
+                                  POP
+                                  <span class="price">3.00</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  Coffee
+                                  <span class="price">3.50</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  Green Tea
+                                  <span class="price">3.50</span>
+                                </a>
+                              </li>
+                              <li class="mt-4">
+                                <a class="dropdown-item d-flex justify-content-between align-items-center w-100" href="#">
+                                  <div class="">
+                                    <span class="d-block">House Wine</span>
+                                    <!-- <span class="d-block ms-4"> </span> Keeps spacing for alignment -->
+                                  </div>
+                                  <div class="text-center ms-3 ms-xl-5">
+                                    <small class="d-block mb-1 mt-lg-2">White</small>
+                                    <small class="d-block mt-2 mt-lg-4">Red</small>
+                                  </div>
+                                  <div class="text-end">
+                                    <span class="price d-block">7.00</span>
+                                    <span class="price d-block">8.00</span>
+                                  </div>
+                                </a>
+                              </li>
+                             
+                              <li class="mt-4">
+                                <a class="dropdown-item" href="#">
+                                  <div class="d-flex align-items-baseline">
+                                    <p class="mb-0">Beer</p>
+                                    <small class="fs-6 ms-2">(Bottle 330ml)</small>
+                                  </div>
+                                  <span class="price">7.00</span>
+                                </a>
+                                <span class="text-white ps-3 mt-0 d-inline-block fs-6">
+                                  Corona, Heineken, Canadian, Kokanee,
+                                  Budweiser, Light
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="staticBackdrop1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog modal-fullscreen p-3 bg-black px-5"
+        >
+          <div class="modal-content bg-black border-green-2 rounded-4">
+            <div class="modal-header border-bottom-green" data-bs-theme="dark">
+              <h5 class="modal-title text-white" id="staticBackdropLabel">
+                Menu 2
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body pt-0">
+              <header class="container-fluid">
+                <div class="col-11 mx-auto d-flex">
+                  <div class="col-3">
+                    <div class="col-12 border-bottom-green position-relative">
+                      <img
+                        src="images/menu-1-logo.png"
+                        alt=""
+                        class="w-50 d-block mx-auto"
+                      />
+                      <h2
+                        class="text-white text-decoration-none font-1 position-absolute bottom-0 start-50 translate-middle mb-0"
+                      >
+                        MENU
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <img
+                      src="images/menu-1-header.png"
+                      alt="menu-1-header"
+                      class="w-50 d-block ms-auto"
+                    />
+                  </div>
+                </div>
+              </header>
+              <!-- menu list -->
+              <div class="container-fluid mb-5">
+                <!-- menu appetizer -->
+                <div class="row my-5">
+                  <div class="col-5 position-relative">
+                    <div class="col-8 position-absolute ms-2 top-0 start-0">
+                      <img src="images/food-5.png" alt="" class="w-100" />
+                    </div>
+                    <div class="position-absolute bottom-9 end-0">
+                      <img src="images/food-6.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="col-7 pe-5">
+                    <div class="card bg-gray border-0 position-relative">
+                      <div
+                        class="position-absolute top-0 start-50 translate-middle position-relative"
+                      >
+                        <img src="images/name-plate.png" alt="" class="w-100" />
+                        <p
+                          class="text-white position-absolute top-50 nam-right-15 translate-middle fs-5 font-1"
+                        >
+                          rice bowl
+                        </p>
+                      </div>
+                      <div class="card-body p-5 pb-3 text-white">
+                        <div class="ps-5 ms-2">
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">
+                                Veggie Teriyaki Rice Bowl
+                              </p>
+                              <p class="card-text">
+                                <small
+                                  >Assorted vegetables in teriyaki sauce Add
+                                  Beef, Chicken Shrimp <b>3.50</b>
+                                </small>
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">11.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Korean Beef Bulgogi</p>
+                              <p class="card-text">
+                                <small
+                                  >Stir-Fried beef marinated in Korean
+                                  traditional sauce</small
+                                >
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">
+                                Spicy Veggie Teriyaki Rice Bowl
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">12.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Veggie Fried Rice</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">14.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Chicken Fried Rice</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">14.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Shrimp Fried Rice</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">14.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">*Steam Rice</p>
+                              <p class="card-text ms-3">s</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">3.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">*Steam Rice</p>
+                              <p class="card-text ms-3">L</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">6.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">St.Louis Style</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- menu soup -->
+                <div class="row my-5">
+                  <div class="col-5 position-relative">
+                    <div
+                      class="col-lg-6 ms-5 position-absolute ms-4 top-50 start-0 translate-middle-y"
+                    >
+                      <img src="images/food-7.png" alt="" class="w-100 ms-3" />
+                    </div>
+                  </div>
+                  <div class="col-7 pe-5">
+                    <div class="card bg-gray border-0 position-relative">
+                      <div
+                        class="position-absolute top-0 start-50 translate-middle position-relative"
+                      >
+                        <img src="images/name-plate.png" alt="" class="w-100" />
+                        <p
+                          class="text-white position-absolute top-50 nam-right-6 translate-middle font-1"
+                        >
+                          baby back pork ribs
+                        </p>
+                      </div>
+                      <div class="card-body p-5 pb-3 text-white">
+                        <div class="ps-5 ms-2">
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Half Rack</p>
+                              <p class="card-text ms-3">
+                                <small> 6 bonds with Coleslaw</small>
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Full Rack</p>
+                              <p class="card-text ms-3">
+                                <small>12 bonds with Coleslaw</small>
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">18.00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- menu chop noodles -->
+                <div class="row my-5">
+                  <div class="col-5 position-relative">
+                    <div
+                      class="col-7 position-absolute ms-2 bottom-0 start-0 mb-5 ms-5"
+                    >
+                      <img src="images/food-8.png" alt="" class="w-100" />
+                    </div>
+                    <div class="col-4 position-absolute bottom-9 end-0">
+                      <img src="images/food-9.png" alt="" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="col-7 pe-5">
+                    <div class="card bg-gray border-0 position-relative">
+                      <div
+                        class="position-absolute top-0 start-50 translate-middle position-relative"
+                      >
+                        <img src="images/name-plate.png" alt="" class="w-100" />
+                        <p
+                          class="text-white position-absolute top-50 nam-right-27 translate-middle fs-5 font-1"
+                        >
+                          beef
+                        </p>
+                      </div>
+                      <div class="card-body p-5 pb-3 text-white">
+                        <div class="ps-5 ms-2">
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Beef & Broccoli</p>
+                              <p class="card-text">
+                                <small>(Spice or Mild)</small>
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">14.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">
+                                Beef & Broccoli in Black Bean Sauce
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Ginger Beef</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">
+                                Jun Spicy Beef Noodles
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">14.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Sweet & Sour Beef</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Szechuan Beef</p>
+                              <p class="card-text">
+                                <small
+                                  >Assorted vegetables with beef, red pepper,
+                                  chili pepper</small
+                                >
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- menu chicken -->
+                <div class="row my-5">
+                  <div class="col-5 position-relative">
+                    <div
+                      class="col-8 position-absolute ms-4 top-50 start-0 translate-middle-y"
+                    >
+                      <img src="images/food-10.png" alt="" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="col-7 pe-5">
+                    <div class="card bg-gray border-0 position-relative">
+                      <div
+                        class="position-absolute top-0 start-50 translate-middle position-relative"
+                      >
+                        <img src="images/name-plate.png" alt="" class="w-100" />
+                        <p
+                          class="text-white position-absolute top-50 nam-right-20 translate-middle fs-5 font-1"
+                        >
+                          chicken
+                        </p>
+                      </div>
+                      <div class="card-body p-5 pb-3 text-white">
+                        <div class="ps-5 ms-2">
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">
+                                Sweet & Sour Chicken
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Lemon Chicken</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">
+                                Sweet & Mango Chicken
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Ginger Chicken</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">14.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Chicken BBQ Ball</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">14.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Korean BBQ Wing</p>
+                              <p class="card-text">
+                                <small>9pcs (Sait & Pepper)</small>
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">14.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Szechuan Chicken</p>
+                              <p class="card-text">
+                                <small
+                                  >Assorted vegetables with chicken red pepper,
+                                  chili pepper</small
+                                >
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-5">
+                  <div class="col-2 text-center border-green-2 ms-auto d-grid">
+                    <button
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                      class="btn py-3 text-white text-decoration-none font-1"
+                    >
+                      PREVIOUS
+                    </button>
+                  </div>
+                  <div class="col-2 text-center border-green-2 ms-auto d-grid">
+                    <button
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop2"
+                      class="btn py-3 text-white text-decoration-none font-1"
+                    >
+                      NEXT
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="staticBackdrop2"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog modal-fullscreen p-3 bg-black px-5"
+        >
+          <div class="modal-content bg-black border-green-2 rounded-4">
+            <div class="modal-header border-bottom-green" data-bs-theme="dark">
+              <h5 class="modal-title text-white" id="staticBackdropLabel">
+                Menu 3
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body pt-0">
+              <header class="container-fluid">
+                <div class="col-11 mx-auto d-flex">
+                  <div class="col-3">
+                    <div class="col-12 border-bottom-green position-relative">
+                      <img
+                        src="images/menu-1-logo.png"
+                        alt=""
+                        class="w-50 d-block mx-auto"
+                      />
+                      <h2
+                        class="text-white text-decoration-none font-1 position-absolute bottom-0 start-50 translate-middle mb-0"
+                      >
+                        MENU
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <img
+                      src="images/menu-1-header.png"
+                      alt="menu-1-header"
+                      class="w-50 d-block ms-auto"
+                    />
+                  </div>
+                </div>
+              </header>
+              <!-- menu list -->
+              <div class="container-fluid mb-5">
+                <!-- menu appetizer -->
+                <div class="row my-5">
+                  <div class="col-5 position-relative">
+                    <div class="col-7 position-absolute ms-2 bottom-0 start-0">
+                      <img src="images/food-11.png" alt="" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="col-7 pe-5">
+                    <div class="card bg-gray border-0 position-relative">
+                      <div
+                        class="position-absolute top-0 start-50 translate-middle position-relative"
+                      >
+                        <img src="images/name-plate.png" alt="" class="w-100" />
+                        <p
+                          class="text-white position-absolute top-50 nam-right-27 translate-middle fs-5 font-1"
+                        >
+                          pork
+                        </p>
+                      </div>
+                      <div class="card-body p-5 pb-3 text-white">
+                        <div class="ps-5 ms-2">
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Sweet & Mango Pork</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Sweet & Sour Pork</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Spicy Oyster Pork</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">15.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Ginger Pork</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">14.50</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- menu soup -->
+                <div class="row my-5">
+                  <div class="col-5 position-relative">
+                    <div
+                      class="col-8 position-absolute ms-4 top-50 start-0 translate-middle-y"
+                    >
+                      <img src="images/lunchmenu.png" alt="" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="col-7 pe-5">
+                    <div class="card bg-gray border-0 position-relative">
+                      <div
+                        class="position-absolute top-0 start-50 translate-middle position-relative"
+                      >
+                        <img src="images/name-plate.png" alt="" class="w-100" />
+                        <p
+                          class="text-white position-absolute top-50 nam-right-1 translate-middle font-1"
+                        >
+                          Joy family dinner
+                        </p>
+                      </div>
+                      <div class="card-body p-5 pb-3 text-white">
+                        <div class="ps-5 ms-2">
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Dinner for 2</p>
+                              <p class="card-text ms-3">
+                                <small>(2 choice)</small>
+                              </p>
+                              <p class="card-text">
+                                <small>2pcs veggie spring rolls included</small>
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">28.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Dinner for 3</p>
+                              <p class="card-text ms-3">
+                                <small>(3 choice)</small>
+                              </p>
+                              <p class="card-text">
+                                <small>3pcs veggie spring rolls included</small>
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">42.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Dinner for 4</p>
+                              <p class="card-text ms-3">
+                                <small>(4 choice)</small>
+                              </p>
+                              <p class="card-text">
+                                <small>4pcs veggie spring rolls included</small>
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">56.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Dinner for 5</p>
+                              <p class="card-text ms-3">
+                                <small>(5 choice)</small>
+                              </p>
+                              <p class="card-text">
+                                <small>5pcs veggie spring rolls included</small>
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">70.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Dinner for 6</p>
+                              <p class="card-text ms-3">
+                                <small>(6 choice)</small>
+                              </p>
+                              <p class="card-text">
+                                <small>6pcs veggie spring rolls included</small>
+                              </p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">84.00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- menu chop noodles -->
+                <div class="row my-5">
+                  <div class="col-5 position-relative">
+                    <div
+                      class="col-6 position-absolute ms-4 top-50 start-0 translate-middle-y"
+                    >
+                      <img src="images/lunchmenu.png" alt="" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="col-7 pe-5">
+                    <div class="card bg-gray border-0 position-relative">
+                      <div
+                        class="position-absolute top-0 start-50 translate-middle position-relative"
+                      >
+                        <img src="images/name-plate.png" alt="" class="w-100" />
+                        <p
+                          class="text-white position-absolute top-50 nam-right-13 fs-5 translate-middle font-1"
+                        >
+                          beverage
+                        </p>
+                      </div>
+                      <div class="card-body p-5 pb-3 text-white">
+                        <div class="ps-5 ms-2">
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">POP</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">2.50</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Coffee</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">3.00</p>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                          >
+                            <div
+                              class="d-flex align-items-baseline col-7 flex-wrap"
+                            >
+                              <p class="card-title fs-3">Green Tea</p>
+                            </div>
+                            <div class="col-2 text-end">
+                              <p class="fs-4 mb-2">3.00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-5">
+                  <div class="col-2 text-center border-green-2 ms-auto d-grid">
+                    <button
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop1"
+                      class="btn py-3 text-white text-decoration-none font-1"
+                    >
+                      PREVIOUS
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="staticBackdrop3"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog modal-fullscreen bg-black">
+          <div class="modal-content bg-black reservation-bg">
+            <div
+              class="modal-header custom-top-overlay"
+              style="border: none"
+              data-bs-theme="dark"
+            >
+              <!--  <h5 class="modal-title text-white" id="staticBackdropLabel">
+                Reservation
+              </h5> -->
+              <button
+                type="button"
+                class="btn-close btnclosemain"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body pt-0 custom-top-overlay">
+              <header class="container-fluid">
+                <div class="col-12 mx-auto">
+                  <h2 class="cushead text-green text-decoration-none">
+                    RESERVATION
+                  </h2>
+                  <button
+                type="button"
+                class="btn-close customclose btnclose"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+                </div>
+              </header>
+              <!-- menu list -->
+              <div class="container-fluid d-flex mx-auto  mb-5 justify-content-center">
+                <div class="row d-flex mx-auto justify-content-center">
+                  <form class="col-md-8 col-12" id="reservationForm">
+                    <div class="col-12 my-3">
+                      <label
+                        for="name"
+                        class="form-label text-white ps-3 font-inter"
+                        >Name</label
+                      >
+                      <div class="d-flex flex-md-nowrap flex-wrap">
+                        <div class="col-md-6 col-12 px-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputEmail4"
+                            placeholder="First"
+                            name="firstName"
+                          />
+                        </div>
+                        <div class="col-md-6 col-12 px-3 mt-md-0 mt-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id=""
+                            placeholder="Last"
+                            name="lastName"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 my-3 px-3">
+                      <label
+                        for="inputAddress"
+                        class="form-label text-white font-inter"
+                        >Contactable Phone Number*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputAddress"
+                        placeholder="We'll confirm your reservation shortly."
+                        name="phone"
+                      />
+                    </div>
+                    <div class="col-12 my-3 px-3">
+                      <label
+                        for="inputAddress2"
+                        class="form-label text-white font-inter"
+                        >Email (Optional)</label
+                      >
+                      <input type="email" name="email" class="form-control" placeholder="Enter your email address" />
+                    </div>
+                    <div class="col-12 my-3 px-3">
+                      <label
+                        for="guestCount"
+                        class="form-label text-white font-inter"
+                        >Number of guests*</label
+                      >
+                      <select class="form-select w-md-25 w-100 font-inter" name="guests" id="guestCount">
+                        <option value="0" class="font-inter">0</option>
+                        <option value="2" class="font-inter">2</option>
+                        <option value="3" class="font-inter">3</option>
+                        <option value="4" class="font-inter">4</option>
+                        <option value="More Than 5" class="font-inter">More than 5</option>
+                      </select>
+                    </div>
+
+                    <div class="col-12 my-3 px-3">
+                      <label for="options" class="form-label text-white font-inter"
+                        >Reservation Time</label
+                      >
+                      <select class="form-select w-md-25 w-100 font-inter" id="options" name="time">
+                        <option value="11:30" class="font-inter">11:30</option>
+                        <option value="12:00" class="font-inter">12:00</option>
+                        <option value="12:30" class="font-inter">12:30</option>
+                        <option value="1:00" class="font-inter">1:00</option>
+                        <option value="1:30" class="font-inter">4:30</option>
+                        <option value="5:00" class="font-inter">5:00</option>
+                        <option value="6:00" class="font-inter">5:30</option>
+                        <option value="6:30" class="font-inter">6:00</option>
+                        <option value="7:00" class="font-inter">6:30</option>
+                      </select>
+                    </div>
+                     <div class="col-12 my-3 px-3">
+                      <label for="date" class="form-label text-white font-inter"
+                        >Reservation Date</label
+                      >
+                      <input class="form-control w-md-25 w-100 font-inter" id="date" type="date" name="date" value="">
+                    </div>
+                    <div class="mb-3 px-3">
+                      <label
+                        for="exampleFormControlTextarea1"
+                        class="form-label font-1 text-white font-inter"
+                        >Special Notes</label
+                      >
+                      <textarea
+                        class="form-control"
+                        name="notes"
+                        id="exampleFormControlTextarea1"
+                        rows="6"
+                      ></textarea>
+                      <div id="passwordHelpBlock" class="form-text text-white font-inter">
+                        To ensure a smooth dining experience for your party,
+                        please let us know if any guests have any allergies or
+                        dietary restrictions.
+                      </div>
+                    </div>
+                    <div class="row px-4">
+                      <div
+                        class="col-12 col-md-3 py-2 text-center border-green-2 bg-dark">
+                        <button type="submit" class="text-white text-decoration-none font-1 bg-dark border-0">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <div class="container-fluid d-md-none bg-black h-100" id="mobileview">
+      <div class="col-12 d-flex flex-column">
+        <!-- First Div (Top) -->
+        <div class="col-12 col-sm-10 mx-auto">
+          <img src="images/jj_Logo.png" alt="Mask-group" class="image-fluid flip-image w-50"/>
+        </div>
+
+        <div class="mobvid">
+          <div class="col-10 mx-auto mb-5">
+            <video autoplay loop muted plays-inline class="w-100">
+              <!-- <source src="images/GH011725.MP4" type="video/mp4"> -->
+              <source src="images/jnew.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+
+        <!-- Second Div (Middle) -->
+        <div class="col-12 flex-grow-1 mb-5">
+          <div class="col-12 col-sm-9 mx-auto mb-3 text-center align-self-center d-grid">
+            <button type="button" class="btn py-lg-3 text-white bg-green text-decoration-none font-1 fs-4 border-green bg-dark-blue rounded-0 menubtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="padding: 4px;">MENU</button>
+          </div>
+          <div class="col-12 col-sm-9 mx-auto text-center d-grid">
+            <button type="button" class="py-lg-3 py-1 text-white text-decoration-none font-1 bg-green border-green bg-dark-blue fs-4 resbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+              RESERVATION
+            </button>
+          </div>
+        </div>
+      
+        <!-- Third Div (Bottom) -->
+        <div class="col-12 mt-5 px-2 font-inter fw-medium mt-auto">
+          <div class="d-flex justify-content-evenly mt-4">
+            <div class="col-6">
+              <a class="text-green mb-1 text-decoration-none d-block" href="mailto:manager@jj-joy.com"><small class="fs-75em">manager@jj-joy.com</small></a>
+              <a class="text-white mb-1 text-decoration-none d-block fs-75em" href="tel:+236-422-3344"><small>236-422-3344</small></a>
+              <a href="https://maps.google.com/?q=101-1475+Fairview+Rd,+Penticton,+BC+V2A+7W5" target="_blank" class="text-white text-decoration-none">
+                <p class="text-white mb-1"><small class="fs-75em">101-1475 Fairview Rd Penticton  BC &#40;map&#41;</small></p>
+                <!-- <p class="text-white mb-0"><small class="fs-75em">BC V2A 7W5</small></p> -->
+              </a>
+            </div>
+            <div class="col-5 text-end">
+              <p class="text-white mb-1"><small class="fs-75em">Lunch 11:30 - 14:00</small></p>
+              <p class="text-white mb-1"><small class="fs-75em">Dinner 16:30 - 20:00</small></p>
+              <p class="text-white mb-1 fw-semibold font-inter"><small class="fs-75em">Closed Sundays, Mondays, Holidays</small></p>
+            </div>
+          </div>
+          <a class="text-white text-decoration-none mx-auto d-block text-center font-inter" href="https://hhlab.ca/" target="_blank" style="font-size:14px;">
+            2025 © All rights reserved
+          </a>
+        </div>
+      </div>    
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+$(document).ready(function() {
+    $("#reservationForm").submit(function(e) {
+        e.preventDefault(); // Prevent page reload
+
+        // Show loader in SweetAlert2
+        Swal.fire({
+            title: "Processing...",
+            text: "Please wait while we submit your reservation.",
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading(); // Show SweetAlert2 Loader
+            }
+        });
+
+        $.ajax({
+            type: "POST",
+            url: "send_email.php",
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function(response) {
+                console.log("AJAX success:", response);
+                  if (response.status === "success") {
+                    Swal.fire({
+                        title: "Success!",
+                        text: response.message,
+                        icon: "success",
+                        confirmButtonText: "OK",
+                        timer: 3000
+                    }).then(() => {
+                        $("#reservationForm")[0].reset(); // Clear form data
+                        window.location.href = "index.html"; // Redirect to home page
+                    });
+                  }
+                else {
+                    Swal.fire({
+                        title: "Error!",
+                        text: response.message,
+                        icon: "error",
+                        confirmButtonText: "Try Again",
+                        timer: 3000
+                    });
+                }
+            },
+            error: function(xhr, status, error) {
+                console.log("AJAX error:", status, error, xhr.responseText);
+                
+                Swal.fire({
+                    title: "Oops!",
+                    text: "Uh oh, seems like your email got lost in space! Please try entering it again.",
+                    icon: "error",
+                    confirmButtonText: "OK"
+                });
+            }
+        });
+    });
+});
+ document.addEventListener("DOMContentLoaded", function () {
+    let today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+    document.getElementById("date").value = today;
+  });
+</script>
+
