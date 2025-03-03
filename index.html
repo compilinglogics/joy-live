@@ -2859,10 +2859,10 @@ $(document).ready(function() {
   document.getElementById("date").addEventListener("input", function() {
     let input = this;
     let date = new Date(input.value);
-    let day = date.getDay(); // 0 = Sunday, 6 = Saturday
+    let day = date.getDay(); // 0 = Sunday, 1 = Monday
 
-    if (day === 0 || day === 6) {
-        alert("Weekends are not allowed. Please select a weekday.");
+    if (day === 0 || day === 1) {
+        alert("Sunday and Monday Are Closed.");
         input.value = ""; // Clear the invalid selection
     }
 });
