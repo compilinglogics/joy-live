@@ -2855,6 +2855,16 @@
 
 <script>
 $(document).ready(function() {
+  document.getElementById("date").addEventListener("input", function() {
+    let input = this;
+    let date = new Date(input.value);
+    let day = date.getDay(); // 0 = Sunday, 6 = Saturday
+
+    if (day === 0 || day === 6) {
+        alert("Weekends are not allowed. Please select a weekday.");
+        input.value = ""; // Clear the invalid selection
+    }
+});
     $("#reservationForm").submit(function(e) {
         e.preventDefault(); // Prevent page reload
 
@@ -2910,6 +2920,7 @@ $(document).ready(function() {
         });
     });
 });
+
  // document.addEventListener("DOMContentLoaded", function () {
  //    let today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
  //    document.getElementById("date").value = today;
